@@ -24,10 +24,8 @@ spec:
     service:
       enabled: true
       type: LoadBalancer
-      spec:
-        externalIPs:
-          - "${SVC_TRAEFIK_ADDRESS}"
-        externalTrafficPolicy: Local
+      loadBalancerIP: "${INGRESS_NGINX_LB}"
+      externalTrafficPolicy: Local
     logs:
       general:
         format: json
