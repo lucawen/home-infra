@@ -28,8 +28,6 @@ spec:
         externalIPs:
           - "${SVC_TRAEFIK_ADDRESS}"
         externalTrafficPolicy: Local
-      annotations:
-        external-dns.alpha.kubernetes.io/hostname: "ipv4.${SECRET_DOMAIN}"
     logs:
       general:
         format: json
@@ -47,8 +45,8 @@ spec:
     globalArguments:
       - "--serverstransport.insecureskipverify=true"
       - "--providers.kubernetesingress.ingressclass=traefik"
-      - "--metrics.prometheus=true"
-      - "--metrics.prometheus.entryPoint=metrics"
+      # - "--metrics.prometheus=true"
+      # - "--metrics.prometheus.entryPoint=metrics"
     additionalArguments:
       - "--providers.kubernetesingress.ingressendpoint.ip=${SVC_TRAEFIK_ADDRESS}"
     ports:
