@@ -7,7 +7,7 @@ metadata:
 spec:
   ipWhiteList:
     sourceRange:
-      - 10.0.0.0/24
+      - 10.0.0.0/8
 ---
 apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
