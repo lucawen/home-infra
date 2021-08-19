@@ -47,8 +47,6 @@ spec:
             value: vikunja-postgresql.default.svc.cluster.local.
           - name: VIKUNJA_DATABASE_DATABASE
             value: vikunja
-          - name: VIKUNJA_SERVICE_ENABLEREGISTRATION
-            value: "false"
           - name: VIKUNJA_DATABASE_USER
             value: vikunja
           - name: VIKUNJA_DATABASE_PASSWORD
