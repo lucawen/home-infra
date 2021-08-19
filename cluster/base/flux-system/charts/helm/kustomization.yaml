@@ -7,3 +7,4 @@ resources:
   - k8s-at-home-charts.yaml
   - metallb-charts.yaml
   - traefik-charts.yaml
+  - authentik-charts.yaml
