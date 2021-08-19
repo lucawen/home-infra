@@ -44,6 +44,14 @@ spec:
       secret_key: ${SECRET_AUTHENTIK_SECRET_KEY}
       log_level: debug
 
+      email:
+        host: smtp.mailgun.org
+        port: 465
+        username: ${SECRET_MAILGUN_USERNAME}
+        password: ${SECRET_MAILGUN_PASSWORD}
+        use_ssl: true
+        from: postmaster@sender.wakecloud.net
+
       outposts:
         docker_image_base: ghcr.io/goauthentik/%(type)s:%(version)s
 
