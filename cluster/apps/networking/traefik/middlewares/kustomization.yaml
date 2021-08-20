@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   # - cloudflare.yaml
   - rfc1918.yaml
+  - traefik-middleware.yaml
   # - redirect-path.yaml
   # - internal-auth.yaml
   # - external-auth.yaml
