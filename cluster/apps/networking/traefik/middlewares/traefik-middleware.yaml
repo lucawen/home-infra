@@ -5,6 +5,13 @@ metadata:
   name: traefik-auth
   namespace: network
 spec:
-  chain:
-    middlewares:
-      - name: security-ak-outpost-traefik@kubernetescrd
+  forwardAuth:
+    address: https://traefik.wakecloud.net/akprox/auth?traefik
+    trustForwardHeader: true
+    authResponseHeaders:
+      - Set-Cookie
+      - X-Auth-Username
+      - X-Auth-Groups
+      - X-Forwarded-Email
+      - X-Forwarded-Preferred-Username
+      - X-Forwarded-User
