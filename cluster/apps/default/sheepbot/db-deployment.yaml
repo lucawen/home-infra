@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    io.kompose.service: db
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: db
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        io.kompose.service: db
+    spec:
+      containers:
+        - image: postgres:12
+          name: db
+          resources: {}
+          env:
+          - name: POSTGRES_DB
+            value: ${SECRET_SHEEPBOT_DATABASE_DB}
+          - name: POSTGRES_PASSWORD
+            value: ${SECRET_SHEEPBOT_DATABASE_PASSWORD}
+      restartPolicy: Always
+status: {}
