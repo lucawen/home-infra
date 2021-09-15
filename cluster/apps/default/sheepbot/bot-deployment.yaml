@@ -25,7 +25,6 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: DATABASE_URL
-            value: ${SECRET_SHEEPBOT_DATABASE_URL}
           - name: BOT_DISCORD_PREFIX
             valueFrom:
               secretKeyRef:
