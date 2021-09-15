@@ -45,7 +45,7 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_PASSWORD
-
+      initContainers:
         - name: db
           image: postgres:12
           imagePullPolicy: "IfNotPresent"
