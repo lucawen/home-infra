@@ -45,5 +45,27 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_PASSWORD
+
+        - name: db
+          image: postgres:12
+          imagePullPolicy: "IfNotPresent"
+          env:
+          - name: POSTGRES_DB
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: DATABASE_DB
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: DATABASE_PASSWORD
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
       restartPolicy: Always
 status: {}
