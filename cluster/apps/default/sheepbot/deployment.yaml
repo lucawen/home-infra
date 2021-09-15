@@ -20,11 +20,11 @@ spec:
           name: bot
           resources:
             requests:
-              memory: "64Mi"
+              memory: "250m"
               cpu: "250m"
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: "1G"
+              cpu: "1G"
           env:
           - name: DATABASE_URL
             valueFrom:
@@ -68,20 +68,20 @@ spec:
                 key: DATABASE_PASSWORD
           resources:
             requests:
-              memory: "64Mi"
+              memory: "250m"
               cpu: "250m"
             limits:
-              memory: "128Mi"
-              cpu: "500m"
+              memory: "1G"
+              cpu: "1G"
 
         - image: fredboat/lavalink:master
           name: lavalink
           resources:
             requests:
-              memory: "64Mi"
+              memory: "250m"
               cpu: "250m"
             limits:
-              memory: "500m"
+              memory: "1G"
               cpu: "1G"
           volumeMounts:
             - mountPath: /opt/Lavalink/application.yml
