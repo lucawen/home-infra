@@ -21,14 +21,30 @@ spec:
           resources: {}
           env:
           - name: DATABASE_URL
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: DATABASE_URL
             value: ${SECRET_SHEEPBOT_DATABASE_URL}
           - name: BOT_DISCORD_PREFIX
-            value: ${SECRET_SHEEPBOT_DISCORD_PREFIX}
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: DISCORD_PREFIX
           - name: BOT_DISCORD_TOKEN
-            value: ${SECRET_SHEEPBOT_DISCORD_TOKEN}
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: DISCORD_TOKEN
           - name: BOT_LAVALINK_URL
-            value: ${SECRET_SHEEPBOT_LAVALINK_URL}
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: LAVALINK_URL
           - name: BOT_LAVALINK_PASSWORD
-            value: ${SECRET_SHEEPBOT_LAVALINK_PASSWORD}
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: LAVALINK_PASSWORD
       restartPolicy: Always
 status: {}

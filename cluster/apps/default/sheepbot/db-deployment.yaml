@@ -21,8 +21,14 @@ spec:
       imagePullPolicy: "IfNotPresent"
       env:
       - name: POSTGRES_DB
-        value: ${SECRET_SHEEPBOT_DATABASE_DB}
+        valueFrom:
+          secretKeyRef:
+            name: sheepbot-creds
+            key: DATABASE_DB
       - name: POSTGRES_PASSWORD
-        value: ${SECRET_SHEEPBOT_DATABASE_PASSWORD}
+        valueFrom:
+          secretKeyRef:
+            name: sheepbot-creds
+            key: DATABASE_PASSWORD
       restartPolicy: Always
 status: {}
