@@ -67,5 +67,22 @@ spec:
             limits:
               memory: "128Mi"
               cpu: "500m"
+
+        - image: fredboat/lavalink:master
+          name: lavalink
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
+            limits:
+              memory: "500m"
+              cpu: "1G"
+          volumeMounts:
+            - mountPath: /opt/Lavalink/application.yml
+              name: lavalink-claim0
+      volumes:
+        - name: lavalink-claim0
+          persistentVolumeClaim:
+            claimName: lavalink-claim0
       restartPolicy: Always
 status: {}
