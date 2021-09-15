@@ -18,13 +18,7 @@ spec:
       containers:
         - image: lucawen/sheepbot
           name: bot
-          resources:
-            requests:
-              memory: "250m"
-              cpu: "250m"
-            limits:
-              memory: "1G"
-              cpu: "1G"
+          resources: {}
           env:
           - name: DATABASE_URL
             valueFrom:
@@ -66,23 +60,11 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: DATABASE_PASSWORD
-          resources:
-            requests:
-              memory: "250m"
-              cpu: "250m"
-            limits:
-              memory: "1G"
-              cpu: "1G"
+          resources: {}
 
         - image: fredboat/lavalink:master
           name: lavalink
-          resources:
-            requests:
-              memory: "250m"
-              cpu: "250m"
-            limits:
-              memory: "1G"
-              cpu: "1G"
+          resources: {}
           volumeMounts:
             - mountPath: /opt/Lavalink/application.yml
               name: lavalink-claim0
