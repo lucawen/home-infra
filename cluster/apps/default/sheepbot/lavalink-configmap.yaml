@@ -7,15 +7,15 @@ metadata:
         use-subpath: "true"
     labels:
         io.kompose.service: lavalink
-    name: lavalink-cm0
+    name: lavalink-cm1
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-09-15T15:23:02Z"
-    mac: ENC[AES256_GCM,data:bq0sl6y+2cMTlOUu2CHd9PiIJ4fbjvBcQK6+PSIiqKrVEiy7F4iaea7Hd2+qeRvwHd+8tOUyQyI9Nbv7KzB0VttOj8N8S9RtHl2RXpM4SGMr396yrSSaAFBiPNyqZFF0d/APt8UXWdxghwk4pMCw0qZ5ODHnNrzPsRHEyIHXm98=,iv:RcyVeSVCk6pp6bfOnwzojY3KsvbieS+yZYQwJHPd+mQ=,tag:y7x5GhFTMmACQBqnNwvkTg==,type:str]
+    lastmodified: "2021-09-15T15:26:34Z"
+    mac: ENC[AES256_GCM,data:9CbRiaijQY73zXiZ5WChB/6nzbDzYeo+PR0WDUEZcivTf6SelFVHnCV6v83qaQ14Iiw8XldFhidsSgGTK1GVjqK1nN4SsOptcjmiUvphr0vtRPp3zFeiburMRY5nKF2CrdVlqczYgP6kIuIutYe2NhiuTdz3lfRy289uHHN1sqM=,iv:bQb12qVbdbWrNTiaWPGC6ydx8IQQEKTeVMo8MP8w4as=,tag:VOoLilqflc+WUvj2JVnU5g==,type:str]
     pgp:
         - created_at: "2021-09-15T15:22:57Z"
           enc: |

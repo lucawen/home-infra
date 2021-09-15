@@ -67,14 +67,14 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /opt/Lavalink/application.yml
-              name: lavalink-cm0
+              name: lavalink-cm1
               subPath: application.yml
       volumes:
         - configMap:
             items:
               - key: application.yml
                 path: application.yml
-            name: lavalink-cm0
-          name: lavalink-cm0
+            name: lavalink-cm1
+          name: lavalink-cm1
       restartPolicy: Always
 status: {}
