@@ -7,5 +7,6 @@ resources:
   - db-service.yaml
   - lavalink-deployment.yaml
   - lavalink-configmap.yaml
+  - lavalink-service.yaml
   # - lavalink-claim0-persistentvolumeclaim.yaml
   - secret.sops.yaml

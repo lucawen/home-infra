@@ -2,23 +2,25 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: lavalink
-  name: lavalink
+    io.kompose.service: sheepbot-lavalink
+  name: sheepbot-lavalink
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: lavalink
+      io.kompose.service: sheepbot-lavalink
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        io.kompose.service: lavalink
+        io.kompose.service: sheepbot-lavalink
     spec:
       containers:
         - image: fredboat/lavalink:master
           name: lavalink
+          ports:
+            - containerPort: 2333
           resources: {}
           volumeMounts:
             - mountPath: /opt/Lavalink/application.yml
