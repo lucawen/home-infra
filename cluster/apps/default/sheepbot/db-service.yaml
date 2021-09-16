@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: sheepbot-db
   labels:
-    name: sheepbot-db
+    app: sheepbot-db
 spec:
   ports:
   - port: 5432
     protocol: TCP
   selector:
-    name: sheepbot-db
+    app: sheepbot-db
