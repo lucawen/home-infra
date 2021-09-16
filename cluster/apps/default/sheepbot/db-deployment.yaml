@@ -2,24 +2,26 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: db
-  name: db
+    io.kompose.service: sheepbot-db
+  name: sheepbot-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: db
+      io.kompose.service: sheepbot-db
   strategy: {}
   template:
     metadata:
       labels:
-        io.kompose.service: db
+        io.kompose.service: sheepbot-db
     spec:
       containers:
         - image: postgres:12
-          name: db
+          name: sheepbot-db
           resources: {}
           imagePullPolicy: "IfNotPresent"
+          ports:
+            - containerPort: 5432
           env:
           - name: POSTGRES_DB
             valueFrom:

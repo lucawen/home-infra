@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sheepbot-db
+  labels:
+    run: sheepbot-db
+spec:
+  ports:
+  - port: 5432
+    protocol: TCP
+  selector:
+    run: sheepbot-db

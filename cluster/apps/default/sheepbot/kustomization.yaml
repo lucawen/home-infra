@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - bot-deployment.yaml
   - db-deployment.yaml
+  - db-service.yaml
   - lavalink-deployment.yaml
   - lavalink-configmap.yaml
   # - lavalink-claim0-persistentvolumeclaim.yaml
