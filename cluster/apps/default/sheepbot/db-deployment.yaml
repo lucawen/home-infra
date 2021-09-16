@@ -22,6 +22,9 @@ spec:
           imagePullPolicy: "IfNotPresent"
           ports:
             - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: postgresdb
           env:
           - name: POSTGRES_DB
             valueFrom:
@@ -34,4 +37,8 @@ spec:
                 name: sheepbot-creds
                 key: DATABASE_PASSWORD
       restartPolicy: Always
+      volumes:
+        - name: postgresdb
+          persistentVolumeClaim:
+            claimName: sheepbot-postgres-pvc
 status: {}

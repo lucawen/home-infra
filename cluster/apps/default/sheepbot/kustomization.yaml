@@ -5,6 +5,7 @@ resources:
   - bot-deployment.yaml
   - db-deployment.yaml
   - db-service.yaml
+  - db-claim0.yaml
   - lavalink-deployment.yaml
   - lavalink-configmap.yaml
   - lavalink-service.yaml
