@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: sheepbot-db
+    io.kompose.service: sheepbot-db
   name: sheepbot-db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: sheepbot-db
+      io.kompose.service: sheepbot-db
   strategy: {}
   template:
     metadata:
       labels:
-        app: sheepbot-db
+        io.kompose.service: sheepbot-db
     spec:
       containers:
         - image: postgres:12

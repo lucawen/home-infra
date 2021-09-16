@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: sheepbot-db
   labels:
-    app: sheepbot-db
+    io.kompose.service: sheepbot-db
 spec:
   ports:
   - port: 5432
     protocol: TCP
   selector:
-    app: sheepbot-db
+    io.kompose.service: sheepbot-db
