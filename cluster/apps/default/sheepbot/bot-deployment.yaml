@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    io.kompose.service: sheepbot
-  name: sheepbot
+    io.kompose.service: bot
+  name: bot
 spec:
   replicas: 1
   selector:
     matchLabels:
-      io.kompose.service: sheepbot
+      io.kompose.service: bot
   strategy: {}
   template:
     metadata:
       labels:
-        io.kompose.service: sheepbot
+        io.kompose.service: bot
     spec:
       containers:
         - image: lucawen/sheepbot
@@ -45,36 +45,5 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_PASSWORD
-      initContainers:
-        - name: db
-          image: postgres:12
-          imagePullPolicy: "IfNotPresent"
-          env:
-          - name: POSTGRES_DB
-            valueFrom:
-              secretKeyRef:
-                name: sheepbot-creds
-                key: DATABASE_DB
-          - name: POSTGRES_PASSWORD
-            valueFrom:
-              secretKeyRef:
-                name: sheepbot-creds
-                key: DATABASE_PASSWORD
-          resources: {}
-
-        - image: fredboat/lavalink:master
-          name: lavalink
-          resources: {}
-          volumeMounts:
-            - mountPath: /opt/Lavalink/application.yml
-              name: lavalink-cm1
-              subPath: application.yml
-      volumes:
-        - configMap:
-            items:
-              - key: application.yml
-                path: application.yml
-            name: lavalink-cm1
-          name: lavalink-cm1
       restartPolicy: Always
 status: {}
