@@ -19,7 +19,7 @@ spec:
         - image: postgres:12
           name: sheepbot-db
           resources: {}
-          imagePullPolicy: "IfNotPresent"
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 5432
           volumeMounts:
