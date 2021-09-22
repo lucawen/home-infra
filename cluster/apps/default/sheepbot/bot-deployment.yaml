@@ -25,32 +25,32 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: DATABASE_URL
-          - name: BOT_DISCORD_PREFIX
+          - name: BOT_DISCORD__PREFIX
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
                 key: DISCORD_PREFIX
-          - name: BOT_DISCORD_TOKEN
+          - name: BOT_DISCORD__TOKEN
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
                 key: DISCORD_TOKEN
-          - name: BOT_LAVALINK_URL
+          - name: BOT_LAVALINK__URL
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_URL
-          - name: BOT_LAVALINK_PASSWORD
+          - name: BOT_LAVALINK__PASSWORD
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_PASSWORD
-          - name: BOT_SPOTIFY_CLIENT_ID
+          - name: BOT_SPOTIFY__CLIENT_ID
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
                 key: SPOTIFY_CLIENT_ID
-          - name: BOT_SPOTIFY_CLIENT_TOKEN
+          - name: BOT_SPOTIFY__CLIENT_TOKEN
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
