@@ -20,7 +20,7 @@ spec:
           name: bot
           resources: {}
           env:
-          - name: DATABASE_URL
+          - name: BOT_DATABASE_URL
             valueFrom:
               secretKeyRef:
                 name: sheepbot-creds
