@@ -45,5 +45,15 @@ spec:
               secretKeyRef:
                 name: sheepbot-creds
                 key: LAVALINK_PASSWORD
+          - name: BOT_SPOTIFY_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: SPOTIFY_CLIENT_ID
+          - name: BOT_SPOTIFY_CLIENT_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: sheepbot-creds
+                key: SPOTIFY_CLIENT_TOKEN
       restartPolicy: Always
 status: {}
