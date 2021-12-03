@@ -4,6 +4,7 @@ metadata:
   labels:
     io.kompose.service: sheepbot-lavalink
   name: sheepbot-lavalink
+  namespace: default
 spec:
   replicas: 1
   selector:

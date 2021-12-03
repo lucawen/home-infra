@@ -8,14 +8,15 @@ metadata:
     labels:
         io.kompose.service: lavalink
     name: lavalink-cm1
+    namespace: default
 sops:
     kms: []
     gcp_kms: []
     azure_kv: []
     hc_vault: []
     age: []
-    lastmodified: "2021-09-15T15:26:34Z"
-    mac: ENC[AES256_GCM,data:9CbRiaijQY73zXiZ5WChB/6nzbDzYeo+PR0WDUEZcivTf6SelFVHnCV6v83qaQ14Iiw8XldFhidsSgGTK1GVjqK1nN4SsOptcjmiUvphr0vtRPp3zFeiburMRY5nKF2CrdVlqczYgP6kIuIutYe2NhiuTdz3lfRy289uHHN1sqM=,iv:bQb12qVbdbWrNTiaWPGC6ydx8IQQEKTeVMo8MP8w4as=,tag:VOoLilqflc+WUvj2JVnU5g==,type:str]
+    lastmodified: "2021-12-03T14:20:26Z"
+    mac: ENC[AES256_GCM,data:gEqZen1Wfe1sHKF5i9tnrzQTubwrFWUwTyqGPmaDtN6APVkquGor4bEUR7FvASB1byshL5FSdS1fOaMyxZZdRXVfvXn/nbY5JJ9nK2byyQYChXLN511gAm6Y9eQINQmLbDKysaZC1xbzWykgftbn60+8qQMtVHbvyc5B/Edh10M=,iv:OF09ETtAAniV3H7ufKgWhUx2jYeRLn649ymSvJShbzA=,tag:rzuIW4JQd3PsaolhynuQag==,type:str]
     pgp:
         - created_at: "2021-09-15T15:22:57Z"
           enc: |
